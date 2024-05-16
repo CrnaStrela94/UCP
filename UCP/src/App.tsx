@@ -12,8 +12,6 @@ function App() {
       <RoundButton svg="connect" onClick={handleClick} />
       <RoundButton svg="abbort" onClick={handleClick} />
       <RoundButton svg="message" onClick={handleClick} />
-
-
     </>
   );
 }
