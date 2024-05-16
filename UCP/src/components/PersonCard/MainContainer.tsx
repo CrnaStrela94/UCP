@@ -5,7 +5,9 @@ const MainContainer = () => {
   const [person, setPerson] = useState<any>();
 
   useEffect(() => {
-    setPerson(persons.people[0]);
+    setPerson(
+      persons.people[Math.floor(Math.random() * persons.people.length - 1)]
+    );
   }, []);
   useEffect(() => {
     console.log(person);

@@ -1,4 +1,5 @@
 import "./App.css";
+import MainContainer from "./components/PersonCard/MainContainer";
 import RoundButton from "./components/btn";
 
 function App() {
@@ -8,10 +9,12 @@ function App() {
 
   return (
     <>
-      <p>knas</p>
-      <RoundButton svg="connect" onClick={handleClick} />
-      <RoundButton svg="abbort" onClick={handleClick} />
-      <RoundButton svg="message" onClick={handleClick} />
+      <div className="tempContainer">
+        <MainContainer />
+        <RoundButton svg="connect" onClick={handleClick} />
+        <RoundButton svg="abbort" onClick={handleClick} />
+        <RoundButton svg="message" onClick={handleClick} />
+      </div>
     </>
   );
 }
