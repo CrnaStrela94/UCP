@@ -9,7 +9,7 @@ type RoundButtonProps = {
 const RoundButton: React.FC<RoundButtonProps> = ({ svg, onClick }) => {
     return (
         <button className="roundBtn" onClick={onClick}>
-            <img src={`/${svg}npm .svg`} alt="description" />
+            <img src={`/${svg}.svg`} alt="description" />
         </button>
     );
 };

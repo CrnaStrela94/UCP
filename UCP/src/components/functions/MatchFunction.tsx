@@ -1,13 +1,16 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import data from '../../jsonData/personData.json'
-import { PersonContext } from '../path/to/PersonContext'
+import { UserContext } from '../UserContext/Usercontext';
 
 export const MatchFunction = () => {
-    const { interests } = useContext(PersonContext);
+    const context = useContext(UserContext);
 
-    const matches = data.people.filter((person: { interests: string[]; }) =>
-        person.interests.some((interest: string) => interests.includes(interest))
-    );
+    let matches: any[] = [];
+    if (context && context.user) {
+        matches = data.people.filter((person: { interests: string[]; }) =>
+            person.interests.some((interest: string) => context.user?.interests.includes(interest))
+        );
+    }
 
     return (
         <div>
