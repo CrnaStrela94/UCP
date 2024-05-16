@@ -1,15 +1,15 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import './btn.scss';
 
 type RoundButtonProps = {
-    svg: ReactNode;
+    svg: string;
     onClick: () => void;
 };
 
 const RoundButton: React.FC<RoundButtonProps> = ({ svg, onClick }) => {
     return (
         <button className="roundBtn" onClick={onClick}>
-            {svg}
+            <img src={`/${svg}.svg`} alt="description" />
         </button>
     );
 };
