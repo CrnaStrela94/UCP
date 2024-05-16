@@ -1,8 +1,14 @@
-import React from 'react'
+import { UserProvider } from '../components/UserContext/Usercontext'
+import RegisterPage from '../pages/RegisterPage/RegisterPage'
 
 const MakeProfile = () => {
+  console.log("hej")
   return (
-    <div>MakeProfile</div>
+    <>
+      <UserProvider>
+        <RegisterPage />
+      </UserProvider>
+    </>
   )
 }
 

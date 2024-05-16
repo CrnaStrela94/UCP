@@ -1,8 +1,8 @@
-import React from 'react'
+import MainContainer from '../components/PersonCard/MainContainer'
 
 const Connect = () => {
   return (
-    <div>Connect</div>
+    <><MainContainer person={undefined} /></>
   )
 }
 

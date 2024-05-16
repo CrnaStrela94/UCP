@@ -1,5 +1,5 @@
-import { useContext } from 'react'
-import data from '../../jsonData/personData.json'
+import { useContext } from 'react';
+import data from '../../jsonData/personData.json';
 import { UserContext } from '../UserContext/Usercontext';
 
 export const MatchFunction = () => {
@@ -7,16 +7,16 @@ export const MatchFunction = () => {
 
     let matches: any[] = [];
     if (context && context.user) {
-        matches = data.people.filter((person: { interests: string[]; }) =>
-            person.interests.some((interest: string) => context.user?.interests.includes(interest))
-        );
+        const userInterests = context.user.interests;
+        matches = data.people
+            .map((person: { interests: string[] }) => {
+                const sharedInterests = person.interests.filter((interest: string) => userInterests.includes(interest));
+                return { person, sharedInterestsCount: sharedInterests.length };
+            })
+            .filter(({ sharedInterestsCount }) => sharedInterestsCount > 0)
+            .sort((a, b) => b.sharedInterestsCount - a.sharedInterestsCount)
+            .map(({ person }) => person);
     }
 
-    return (
-        <div>
-            {matches.map((match, index) => (
-                <p key={index}>{match.interests}</p>
-            ))}
-        </div>
-    )
-}
+    return matches;
+};

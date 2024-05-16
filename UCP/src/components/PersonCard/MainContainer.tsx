@@ -1,32 +1,36 @@
-import React, { useEffect, useState } from "react";
-import persons from "../../jsonData/personData.json";
+import { useEffect, useState } from "react";
 import "./mainContainer.scss";
-const MainContainer = () => {
-  const [person, setPerson] = useState<any>();
+
+type MainContainerProps = {
+  person: any; // replace 'any' with the type of your person object
+};
+const MainContainer: React.FC<MainContainerProps> = ({ person }) => {
+
+  const [selectedPerson, setPerson] = useState<any>();
 
   useEffect(() => {
-    setPerson(persons.people[0]);
+    setPerson(person);
   }, []);
   useEffect(() => {
-    console.log(person);
-  }, [person]);
+    console.log(selectedPerson);
+  }, [selectedPerson]);
   return (
     <>
       {person && (
         <div className="cardContainer">
           <div className="imgContainer">
             <img
-              src={person.image_source}
+              src={selectedPerson.image_source}
               alt="Some guy"
               className="selfieImage"
             />
           </div>
           <h2 className="name">
-            {person.first_name} {person.last_name}
+            {selectedPerson.first_name} {selectedPerson.last_name}
           </h2>
           <div className="interests">
             <ul className="interestList">
-              {person.interests.map((item: string, index: number) => (
+              {selectedPerson.interests.map((item: string, index: number) => (
                 <li className="individualInterest" key={index}>
                   {item}
                 </li>
@@ -35,6 +39,7 @@ const MainContainer = () => {
           </div>
         </div>
       )}
+
     </>
   );
 };

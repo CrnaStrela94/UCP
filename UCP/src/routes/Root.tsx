@@ -1,8 +1,10 @@
-import App from '../App'
+import Start from './Start'
 
 const Root = () => {
   return (
-    <><div>Root</div><App /></>
+    <>
+      <Start />
+    </>
   )
 }
 
