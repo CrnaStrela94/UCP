@@ -1,31 +1,23 @@
-import React, { createContext, useState, ReactNode, FC } from "react";
+import { createContext, useState, useEffect } from 'react';
+import AppRouter from '../../routes/router';
+import Connect from '../../routes/Connect';
 
-interface User {
-  firstname: string;
-  lastname: string;
-  interests: string[];
-  language: string;
-}
+export const UserContext = createContext<any>(null);
 
-interface UserContextType {
-  user: User | null;
-  setUser: React.Dispatch<React.SetStateAction<User | null>>;
-}
+export const UserProvider = ({ children }: { children: any }) => {
+  const [user, setUser] = useState(null);
 
-export const UserContext = createContext<UserContextType | undefined>(
-  undefined
-);
-
-interface UserProviderProps {
-  children: ReactNode;
-}
-
-export const UserProvider: FC<UserProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
+    }
+  }, [user]);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
       {children}
+      <AppRouter />
+      <Connect />
     </UserContext.Provider>
   );
 };

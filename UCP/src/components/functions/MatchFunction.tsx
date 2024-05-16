@@ -1,22 +1,22 @@
-import { useContext } from 'react';
-import data from '../../jsonData/personData.json';
-import { UserContext } from '../UserContext/Usercontext';
+import personData from '../../jsonData/personData.json';
 
-export const MatchFunction = () => {
-    const context = useContext(UserContext);
+const MatchFunction = async () => {
+    const user = JSON.parse(localStorage.getItem('user') || 'null');
 
-    let matches: any[] = [];
-    if (context && context.user) {
-        const userInterests = context.user.interests;
-        matches = data.people
-            .map((person: { interests: string[] }) => {
-                const sharedInterests = person.interests.filter((interest: string) => userInterests.includes(interest));
-                return { person, sharedInterestsCount: sharedInterests.length };
-            })
-            .filter(({ sharedInterestsCount }) => sharedInterestsCount > 0)
-            .sort((a, b) => b.sharedInterestsCount - a.sharedInterestsCount)
-            .map(({ person }) => person);
+    if (!user) {
+        return null;
     }
+
+    console.log("user", user)
+
+    const matches = personData.people.filter((person) => {
+        if (person.interests.some((interest: any) => user.interests.includes(interest))) {
+            console.log("person matched:", person)
+            return person
+        }
+    });
 
     return matches;
 };
+
+export default MatchFunction;
