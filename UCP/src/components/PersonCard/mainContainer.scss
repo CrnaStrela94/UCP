@@ -1,0 +1,45 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  background-color: white;
+  color: black;
+  width: 30rem;
+  border-radius: 2rem;
+  align-items: center;
+  height: 55rem;
+  justify-content: space-between;
+}
+.selfieImage {
+  width: 28rem;
+
+  border-radius: 2rem;
+}
+.imgContainer {
+  margin: 1rem;
+  max-height: 30rem;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.interestList {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.individualInterest {
+  list-style: none;
+  margin: 0.5rem;
+  background-color: grey;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 10rem;
+  text-align: center;
+  font-weight: 650;
+}
