@@ -10,135 +10,135 @@
       {
         "first_name": "Emma",
         "last_name": "Johnson",
-        "interests": ["Painting", "Hiking", "Yoga", "Playing Guitar"],
+        "interests": ["Painting", "Hiking", "Yoga", "Guitar"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieTwo.jpg"
       },
       {
         "first_name": "David",
         "last_name": "Martinez",
         "interests": ["Soccer", "Movies", "Coding", "Music"],
         "native_language": "Spanish",
-        "image_source": ""
+        "image_source": "/selfieThree.jpg"
       },
       {
         "first_name": "Sophia",
         "last_name": "Lee",
         "interests": ["Dancing", "Reading", "Cooking", "Gardening"],
         "native_language": "Korean",
-        "image_source": ""
+        "image_source": "/selfieFour.jpg"
       },
       {
         "first_name": "Michael",
         "last_name": "Garcia",
         "interests": ["Gaming", "Basketball", "Writing", "Photography"],
         "native_language": "Spanish",
-        "image_source": ""
+        "image_source": "/selfieFive.jpg"
       },
       {
         "first_name": "Isabella",
         "last_name": "Brown",
         "interests": ["Drawing", "Traveling", "Swimming", "Hiking"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieSix.jpg"
       },
       {
         "first_name": "James",
         "last_name": "Kim",
-        "interests": ["Coding", "Watching TV Shows", "Playing Piano", "Traveling"],
+        "interests": ["Coding", "TV Shows", "Piano", "Traveling"],
         "native_language": "Korean",
-        "image_source": ""
+        "image_source": "/selfieSeven.jpg"
       },
       {
         "first_name": "Olivia",
         "last_name": "Jones",
         "interests": ["Singing", "Reading", "Painting", "Hiking"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieEight.jpg"
       },
       {
         "first_name": "Daniel",
         "last_name": "Hernandez",
         "interests": ["Football", "Cooking", "Traveling", "Photography"],
         "native_language": "Spanish",
-        "image_source": ""
+        "image_source": "/selfieNine.jpg"
       },
       {
         "first_name": "Charlotte",
         "last_name": "Lopez",
         "interests": ["Photography", "Yoga", "Reading", "Traveling"],
         "native_language": "Spanish",
-        "image_source": ""
+        "image_source": "/selfieTen.jpg"
       },
       {
         "first_name": "Alexander",
         "last_name": "Miller",
-        "interests": ["Gaming", "Writing", "Playing Guitar", "Traveling"],
+        "interests": ["Gaming", "Writing", "Guitar", "Traveling"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieNineteen.jpg"
       },
       {
         "first_name": "Amelia",
         "last_name": "Rodriguez",
-        "interests": ["Dancing", "Watching Movies", "Painting", "Hiking"],
+        "interests": ["Dancing", "Movies", "Painting", "Hiking"],
         "native_language": "Spanish",
-        "image_source": ""
+        "image_source": "/selfieTwelve.jpg"
       },
       {
         "first_name": "William",
         "last_name": "Gonzalez",
         "interests": ["Basketball", "Reading", "Cooking", "Traveling"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieThirteen.jpg"
       },
       {
         "first_name": "Mia",
         "last_name": "White",
         "interests": ["Photography", "Swimming", "Cooking", "Traveling"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieFourteen.jpg"
       },
       {
         "first_name": "Benjamin",
         "last_name": "Young",
-        "interests": ["Soccer", "Coding", "Hiking", "Playing Guitar"],
+        "interests": ["Soccer", "Coding", "Hiking", "Guitar"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieFifteen.jpg"
       },
       {
         "first_name": "Evelyn",
         "last_name": "Turner",
         "interests": ["Singing", "Traveling", "Painting", "Cooking"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieSixteen.jpg"
       },
       {
         "first_name": "Ethan",
         "last_name": "Adams",
         "interests": ["Gaming", "Basketball", "Reading", "Traveling"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieSeventeen.jpg"
       },
       {
         "first_name": "Ava",
         "last_name": "Harris",
         "interests": ["Writing", "Dancing", "Cooking", "Traveling"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieEighteen.jpg"
       },
       {
         "first_name": "Jacob",
         "last_name": "Clark",
         "interests": ["Music", "Hiking", "Reading", "Cooking"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieNineteen.jpg"
       },
       {
         "first_name": "Emily",
         "last_name": "Lewis",
         "interests": ["Photography", "Painting", "Yoga", "Reading"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieTwenty.jpg"
       }
     ]
   }

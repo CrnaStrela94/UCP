@@ -7,11 +7,21 @@
   width: 30rem;
   border-radius: 2rem;
   align-items: center;
+  height: 55rem;
+  justify-content: space-between;
 }
 .selfieImage {
   width: 28rem;
-  margin: 1rem;
+
   border-radius: 2rem;
+}
+.imgContainer {
+  margin: 1rem;
+  max-height: 30rem;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 .name {
   margin: 0;

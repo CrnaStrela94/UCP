@@ -14,11 +14,13 @@ const MainContainer = () => {
     <>
       {person && (
         <div className="cardContainer">
-          <img
-            src={person.image_source}
-            alt="Some guy"
-            className="selfieImage"
-          />
+          <div className="imgContainer">
+            <img
+              src={person.image_source}
+              alt="Some guy"
+              className="selfieImage"
+            />
+          </div>
           <h2 className="name">
             {person.first_name} {person.last_name}
           </h2>
