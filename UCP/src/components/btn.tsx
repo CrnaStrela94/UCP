@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './btn.scss';
 
 type RoundButtonProps = {
@@ -9,7 +9,7 @@ type RoundButtonProps = {
 const RoundButton: React.FC<RoundButtonProps> = ({ svg, onClick }) => {
     return (
         <button className="roundBtn" onClick={onClick}>
-            <img src={`/${svg}.svg`} alt="description" />
+            <img src={`/${svg}npm .svg`} alt="description" />
         </button>
     );
 };
