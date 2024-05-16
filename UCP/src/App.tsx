@@ -1,5 +1,5 @@
 import "./App.css";
-import RoundButton from "./components/btn";
+import RoundButton from "./components/btn/btn";
 
 function App() {
   function handleClick(): void {
