@@ -1,5 +1,7 @@
 import "./App.css";
 import RoundButton from "./components/btn/btn";
+import LogIn from "./routes/LogIn";
+import Start from "./routes/Start";
 
 function App() {
   function handleClick(): void {
@@ -8,10 +10,12 @@ function App() {
 
   return (
     <>
+    <Start/>
       <p>knas</p>
       <RoundButton svg="connect" onClick={handleClick} />
       <RoundButton svg="abbort" onClick={handleClick} />
       <RoundButton svg="message" onClick={handleClick} />
+      <LogIn/>
     </>
   );
 }
