@@ -5,7 +5,7 @@
         "last_name": "Smith",
         "interests": ["Reading", "Cooking", "Traveling", "Photography"],
         "native_language": "English",
-        "image_source": ""
+        "image_source": "/selfieOne.jpg"
       },
       {
         "first_name": "Emma",
