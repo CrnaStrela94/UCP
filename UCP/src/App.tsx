@@ -12,9 +12,15 @@ export interface User {
 }
 
 const App: React.FC = () => {
-  const people: { first_name: string; last_name: string; interests: string[]; native_language: string; image_source: string; }[] = personData.people;
+  const people: {
+    first_name: string;
+    last_name: string;
+    interests: string[];
+    native_language: string;
+    image_source: string;
+  }[] = personData.people;
 
-  const users: User[] = people.map(person => {
+  const users: User[] = people.map((person) => {
     return {
       firstName: person.first_name,
       lastName: person.last_name,
@@ -39,6 +45,6 @@ const App: React.FC = () => {
       )}
     </div>
   );
-}
+};
 
 export default App;

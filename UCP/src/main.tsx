@@ -1,25 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-<<<<<<< HEAD
-import './index.css'
-import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./routes/router.tsx";
-=======
+import ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
-import './App.css';
->>>>>>> luka
+import './index.css'; // Add this line
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
-  </React.StrictMode>,
-)
-=======
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
->>>>>>> luka
