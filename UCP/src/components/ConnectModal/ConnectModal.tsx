@@ -28,7 +28,8 @@ const ConnectModal: React.FC<ConnectModalProps> = ({
     );
   };
 
-  const handlePlanDate = () => {
+  const handlePlanDate = (event: React.FormEvent) => {
+    event.preventDefault();
     onPlanDate(selectedInterests);
   };
 
@@ -49,9 +50,21 @@ const ConnectModal: React.FC<ConnectModalProps> = ({
             alt={`${user.firstName} ${user.lastName}`}
             className="w-32 h-32 object-cover object-center rounded-full border-4 border-white shadow-md mx-auto"
           />
-          <h3 className="text-xl font-semibold text-gray-800 mt-4">
+          <h3 className="text-xl font-semibold mb-3 text-gray-800 mt-4">
             {user.firstName} {user.lastName}
           </h3>
+          {user.interests.map((interest, index) => (
+            <span
+              key={index}
+              className={`text-sm font-medium mr-2 px-3.5 py-1.5 rounded-full mb-2 ${
+                commonInterests.includes(interest)
+                  ? 'bg-green-100 text-green-800'
+                  : 'bg-blue-100 text-blue-800'
+              }`}
+            >
+              {interest}
+            </span>
+          ))}
           <p className="text-gray-600 mt-2">
             Native Language: {user.nativeLanguage}
           </p>
@@ -73,13 +86,48 @@ const ConnectModal: React.FC<ConnectModalProps> = ({
                 </label>
               </div>
             ))}
+            <form className="mt-4" onSubmit={handlePlanDate}>
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                Plan a Date:
+              </h4>
+              <div className="mb-4">
+                <label htmlFor="date">Date:</label>
+                <input
+                  type="date"
+                  id="date"
+                  className="ml-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="time">Time:</label>
+                <input
+                  type="time"
+                  id="time"
+                  className="ml-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="location">Location:</label>
+                <input
+                  type="text"
+                  id="location"
+                  className="ml-2 p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                Submit
+              </button>
+            </form>
           </div>
-          <button
-            onClick={handlePlanDate}
-            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Plan Date
-          </button>
+          <div className="mt-4">
+            <div className="flex flex-wrap justify-center"></div>
+          </div>
         </div>
       </div>
     </div>

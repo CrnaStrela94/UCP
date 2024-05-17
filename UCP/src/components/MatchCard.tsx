@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import RoundButton from './btn/btn';
 import ConnectModal from './ConnectModal/ConnectModal';
-
-interface User {
-  firstName: string;
-  lastName: string;
-  interests: string[];
-  nativeLanguage: string;
-  imageSource: string;
-}
+import { User } from '../App';
 
 interface MatchCardProps {
   user: User;
