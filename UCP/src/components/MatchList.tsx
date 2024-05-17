@@ -20,7 +20,7 @@ const MatchList: React.FC<MatchListProps> = ({ currentUser, users }) => {
   );
 
   return (
-    <div className="min-h-screen flex items-center justify-center pt-10">
+    <div className="min-h-screen flex items-center justify-center">
       <div className="flex flex-wrap justify-center">
         {matches.map((user, index) => (
           <MatchCard

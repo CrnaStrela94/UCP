@@ -27,7 +27,7 @@ const UserForm: React.FC<UserFormProps> = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md"
+      className="max-w-md mt-8 mx-auto p-4 bg-white shadow-md rounded-md"
     >
       <div className="mb-4">
         <label

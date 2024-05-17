@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import personData from './jsonData/personData.json';
 import UserForm from './components/UserForm';
 import MatchList from './components/MatchList';
+import Nav from './components/Nav/Nav';
 
 export interface User {
   firstName: string;
@@ -37,7 +38,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container bg-boras bg-cover bg-center min-h-screen">
+      <Nav />
       {!currentUser ? (
         <UserForm onSubmit={handleFormSubmit} />
       ) : (

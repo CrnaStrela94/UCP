@@ -1,6 +1,8 @@
+// MatchCard.tsx
 import React, { useState } from 'react';
 import RoundButton from './btn/btn';
 import ConnectModal from './ConnectModal/ConnectModal';
+import FakeMessageModal from '../components/FakeMessage/FakeMessageGenerator';
 import { User } from '../App';
 
 interface MatchCardProps {
@@ -12,26 +14,31 @@ const MatchCard: React.FC<MatchCardProps> = ({
   user,
   currentUserInterests,
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
 
   const commonInterests = user.interests.filter((interest) =>
     currentUserInterests.includes(interest)
   );
 
   const handleConnect = () => {
-    setIsModalOpen(true);
+    setIsConnectModalOpen(true);
   };
 
   const handleMessage = () => {
-    alert(`Message ${user.firstName} ${user.lastName}`);
+    setIsMessageModalOpen(true);
   };
 
   const handleSkip = () => {
     alert(`Skipped ${user.firstName} ${user.lastName}`);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const closeConnectModal = () => {
+    setIsConnectModalOpen(false);
+  };
+
+  const closeMessageModal = () => {
+    setIsMessageModalOpen(false);
   };
 
   const handlePlanDate = (selectedInterests: string[]) => {
@@ -40,7 +47,7 @@ const MatchCard: React.FC<MatchCardProps> = ({
         user.lastName
       } for interests: ${selectedInterests.join(', ')}`
     );
-    closeModal();
+    closeConnectModal();
   };
 
   return (
@@ -98,10 +105,15 @@ const MatchCard: React.FC<MatchCardProps> = ({
       </div>
       <ConnectModal
         user={user}
-        isOpen={isModalOpen}
-        onClose={closeModal}
+        isOpen={isConnectModalOpen}
+        onClose={closeConnectModal}
         onPlanDate={handlePlanDate}
         commonInterests={commonInterests}
+      />
+      <FakeMessageModal
+        user={user}
+        isOpen={isMessageModalOpen}
+        onClose={closeMessageModal}
       />
     </div>
   );
